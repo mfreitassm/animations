@@ -1,2 +1,2 @@
-# animations
+# Animations
 animations
