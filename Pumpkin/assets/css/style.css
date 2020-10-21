@@ -8,6 +8,11 @@ body {
     justify-content: center;
     align-items: center;
 }
+h1{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-right: 2em;
+}
 
 .pumpkin {
     height: 270px;
@@ -23,6 +28,11 @@ body {
 
 body:hover {
     background: #090B06;
+}
+
+body:hover h1{
+    color:#f5d913;
+    filter: drop-shadow(2px 4px 6px white);
 }
 
 body:hover .pumpkin .eye,
