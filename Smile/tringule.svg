@@ -1,0 +1,8 @@
+ <svg class="sun-rays" width="400" height="200">
+            <polygon class="rays" points="200,20 260,200 150,200"
+                transform="rotate(30deg)" />
+            <polygon class="rays" points="100,50 150,200 40,200"
+                transform="rotate(180deg)" />
+            <polygon class="rays" points="300,50 260,200 350,200"
+                transform="rotate(-30deg)" />
+        </svg>

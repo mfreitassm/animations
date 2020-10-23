@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Parisienne&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0B1026;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    overflow: hidden;
+    width: 800px;
+    max-width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    vertical-align: center;
+    position: relative;
+
+}
+
+h1 {
+    margin-top: 3em;
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    line-height: 1.5em;
+    font-weight: 700;
+
+}
+
+.burts8 {
+    background: #0B1026;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    text-align: center;
+    /* transform: rotate(20deg);*/
+    z-index: 1;
+}
+
+.burts8:before,
+.burts8:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 400px;
+    background: #0B1026;
+
+}
+
+.burts8:before {
+    transform: rotate(30deg);
+    z-index: 3;
+
+}
+
+.burts8:after {
+    transform: rotate(60deg);
+    z-index: 5;
+
+}
+
+.sun-rays {
+    background: #0B1026;
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    top: 18%;
+    left: 19%;
+    text-align: center;
+    /* transform: rotate(20deg);*/
+    z-index: -1;
+
+}
+
+.sun-rays:before,
+.sun-rays:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 450px;
+    text-align: center;
+    z-index: 5;
+    background: #0B1026;
+
+}
+
+.sun-rays:before {
+    transform: rotate(30deg);
+}
+
+.sun-rays:after {
+    transform: rotate(60deg);
+
+}
+
+.smile {
+    fill: #35475F;
+    position: absolute;
+    top: 26%;
+    left: 30%;
+    z-index: 50;
+    filter: drop-shadow(1px 2px 30px white);
+    animation: blinkMoon 5s infinite;
+}
+
+@keyframes blinkMoon {
+
+    100%,
+    0% {
+        fill: #35475F;
+    }
+
+    60% {
+        fill: #161B36;
+    }
+}
+
+
+
+.smile .eyebrow {
+    fill: #000;
+    transition: all .5s linear;
+}
+
+.smile .eyebrow.left {
+    transform: rotate(80deg);
+    transform-origin: 100px 82px;
+
+}
+
+.smile .eyebrow.right {
+    transform: rotate(100deg);
+    transform-origin: 190px 82px;
+}
+
+.smile .eye {
+    fill: #000;
+    visibility: hidden;
+}
+
+.smile .mouth {
+    stroke: #000;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    transform: rotate(180deg);
+    transform-origin: 150px 200px;
+    transition: all .5s linear;
+
+}
+
+.close-eye.left,
+.close-eye.right {
+    fill: none;
+    stroke: #000;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+body:hover {
+    background-color: #64E1FF;
+
+}
+
+body:hover h1{
+    visibility: hidden;
+}
+
+body:hover .burts8,
+body:hover .burts8:before,
+body:hover .burts8:after {
+    background: #FFCE32;
+
+}
+
+body:hover .sun-rays,
+body:hover .sun-rays:before,
+body:hover .sun-rays:after {
+    background: #FFCE32;
+    background: radial-gradient(circle, rgba(248, 152, 48, 1) 0%, rgba(240, 80, 32, 1) 100%);
+}
+
+body:hover .sun-rays {
+    filter: drop-shadow(1px 2px 15px red)
+}
+
+body:hover .smile {
+    fill: #FEF024;
+    filter: none;
+    animation: blinkSun 5s infinite;
+}
+
+@keyframes blinkSun {
+
+    100%,
+    0% {
+        fill: #FEF024;
+    }
+
+    60% {
+        fill: #FFCE32;
+    }
+}
+
+body:hover .smile .eye {
+    visibility: visible;
+}
+
+body:hover .smile .close-eye {
+    visibility: hidden;
+}
+
+body:hover .smile .eyebrow.left {
+    transform: rotate(100deg);
+}
+
+body:hover .smile .eyebrow.right {
+    transform: rotate(80deg);
+}
+
+body:hover .smile .mouth {
+    transform: rotate(360deg);
+    fill: #d84030;
+    stroke-width: 0;
+}
